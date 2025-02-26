@@ -1,9 +1,9 @@
 import { Outlet } from "react-router-dom";
 import styled from "styled-components";
+import ScrollToTop from "@hooks/scrollToTop";
 
 const Wrapper = styled.div`
   width: 100%;
-  // Todo: 추후 화면 최대 너비 확인 후 변경 필요
   max-width: 560px;
   background: linear-gradient(#4e4376, #f5e1c8);
 `;
@@ -11,6 +11,7 @@ const Wrapper = styled.div`
 const RootLayout = () => {
   return (
     <Wrapper>
+      <ScrollToTop />
       <Outlet />
     </Wrapper>
   );
